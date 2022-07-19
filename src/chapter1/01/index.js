@@ -32,5 +32,24 @@ import { $ } from '/assets/js/common.js'
  </section>
 </div>`
 
-   window.addEventListener('load', () => {})
+  window.addEventListener('load', () => {
+    const $text = $('.progress .txt')
+    const $progressBar = $('.progress .bar')
+
+    const getPercent = () => {
+      const scrollHeight = $('.sec01').offsetHeight
+      // sec01의 전체 높이 (scrollHeight)에서 브라우저의 높이를 빼서 실제 스크롤 되는 영역을 계산
+      const scrollRealHeight = scrollHeight - window.innerHeight
+      // 일부 오래된 브라우저는 scrollY 대신 pageYOffset만 지원하는 경우가 있다. 그 외엔 scorllY를 써도 무방
+      const winScrollTop = window.pageYOffset
+      // 스크롤 된 값 (winScrollTop) / 실제 스크롤 높이 (scrollRealHeight) * 100 으로 백분율을 구한다.
+      const scrollPercent = (winScrollTop / scrollRealHeight) * 100
+
+      $progressBar.style.width = `${scrollPercent}%`
+      $text.innerText = `${Math.round(scrollPercent)}%`
+    }
+
+    getPercent()
+    document.addEventListener('scroll', getPercent)
+  })
 })()

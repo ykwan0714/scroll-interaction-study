@@ -1,0 +1,147 @@
+.wrap {
+  overflow: hidden;
+}
+.tit {
+  margin: 100px 0 80px;
+  font-size: 70px;
+  text-align: center;
+}
+.btn {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  margin-top: 50px;
+  border: 1px solid #ddd;
+  background: #ddd;
+  font-size: 24px;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.sec01 .transfom_ex .list:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+.sec01 .transfom_ex .list li {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.sec01 .transfom_ex .list li .txt {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.sec01 .transfom_ex .jake01 {
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+}
+.sec01 .transfom_ex .jake01.active {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+}
+.sec01 .transfom_ex .jake02 {
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+}
+.sec01 .transfom_ex .jake02.active {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+}
+.sec01 .transfom_ex .jake03 {
+  transform: skew(30deg);
+  -webkit-transform: skew(30deg);
+  -moz-transform: skew(30deg);
+  -o-transform: skew(30deg);
+  -ms-transform: skew(30deg);
+}
+.sec01 .transfom_ex .jake03.active {
+  transform: skew(0deg);
+  -webkit-transform: skew(0deg);
+  -moz-transform: skew(0deg);
+  -o-transform: skew(0deg);
+  -ms-transform: skew(0deg);
+}
+.sec01 .transfom_ex .jake04 {
+  transform: translate(100px, -100px);
+  -webkit-transform: translate(100px, -100px);
+  -moz-transform: translate(100px, -100px);
+  -o-transform: translate(100px, -100px);
+  -ms-transform: translate(100px, -100px);
+}
+.sec01 .transfom_ex .jake04.active {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+}
+
+/*섹션 2는 보기 편하도록 벤더 프리픽스 생략*/
+.sec02 {
+}
+.sec02 .transfom_ex .list {
+}
+.sec02 .transfom_ex .list:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+.sec02 .transfom_ex .list li {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.sec02 .transfom_ex .list li .txt {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.sec02 .transfom_ex .jake01 {
+  transform: rotate(20deg);
+  transition: transform 0.5s;
+}
+.sec02 .transfom_ex .jake01.active {
+  transform: rotate(0deg);
+}
+.sec02 .transfom_ex .jake02 {
+  transform: scale(0.7);
+  transition: transform 0.5s;
+}
+.sec02 .transfom_ex .jake02.active {
+  transform: scale(1);
+}
+.sec02 .transfom_ex .jake03 {
+  transform: skew(30deg);
+  transition: transform 0.5s;
+}
+.sec02 .transfom_ex .jake03.active {
+  transform: skew(0deg);
+}
+.sec02 .transfom_ex .jake04 {
+  transform: translate(100px, -100px);
+  transition: transform 0.5s;
+}
+.sec02 .transfom_ex .jake04.active {
+  transform: translate(0px, 0px);
+}

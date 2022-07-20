@@ -1,0 +1,48 @@
+.tit_area {
+  padding: 100px 0 0 0;
+}
+.tit_area .f_content {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.tit_area .f_content .tit {
+  position: relative;
+  z-index: 20;
+  left: 50px;
+  font-size: 80px;
+  line-height: 1.2;
+  opacity: 1;
+}
+.tit_area .f_content .txt {
+  position: relative;
+  z-index: 20;
+  left: 80px;
+  font-size: 50px;
+  opacity: 1;
+}
+.tit_area .f_content .img {
+  position: relative;
+  transform: translateY(50px);
+  transition: 4s 0.2s cubic-bezier(0.3, 1.01, 0.51, 1.04);
+}
+.tit_area .f_content.active .img {
+  transform: translateY(-10px);
+}
+.tit_area .f_content .img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #fff;
+  transition: 2s 0.3s cubic-bezier(0.3, 1.01, 0.51, 1.04);
+}
+.tit_area .f_content.active .img:after {
+  width: 0px;
+}
+.tit_area .f_content .img img {
+  width: auto;
+}

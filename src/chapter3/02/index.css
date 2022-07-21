@@ -1,0 +1,56 @@
+/* 스크롤 배경 만들기 */
+.area_motion {
+  position: relative;
+  width: 100%;
+  height: 6000px;
+  background-color: #000;
+}
+.area_motion .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.area_motion .bg.one {
+  background-image: url('~/assets/images/bg-water-1.png');
+} /* 아침 */
+.area_motion .bg.two {
+  background-image: url('~/assets/images/bg-water-2.png');
+} /* 점심 */
+.area_motion .bg.three {
+  background-image: url('~/assets/images/bg-water-3.png');
+} /* 이른저녁 */
+.area_motion .bg.four {
+  background-image:url('~/assets/images/bg-water-4.png');
+} /* 밤 */
+.area_motion .bg.active {
+  opacity: 1;
+}
+
+.area_motion .motion_moon {
+  visibility: hidden;
+  position: fixed;
+  right: 100px;
+  top: 100px;
+  z-index: 20;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transition: 1s;
+}
+.area_motion .motion_moon.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+}

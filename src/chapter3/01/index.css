@@ -1,0 +1,39 @@
+.motion_diver {
+  position: relative;
+  display: inline-block;
+}
+
+.motion_diver figure img {
+  width: auto;
+}
+.motion_diver .figure_body {
+  display: inline-block;
+}
+.motion_diver .figure_leg {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+  z-index: -1;
+  transform-origin: 248px 148px;
+  -webkit-transform-origin: 248px 148px;
+  -moz-transform-origin: 248px 148px;
+  -o-transform-origin: 248px 148px;
+  -ms-transform-origin: 248px 148px;
+  animation-name: leg_move;
+  animation-duration: 0.8s; /*한번 재생걸리는시간*/
+  animation-delay: 0s; /*애니메이션 지연*/
+  animation-direction: alternate; /* 애니메이션 재생방향 alternate :순방향, reverse: 역방향*/
+  animation-iteration-count: infinite; /* 애니메이션 재생횟수 infinite 무한*/
+  animation-play-state: running; /* 애니메이션 재생여부  running :재생 (기본값), paused(애니메이션정지)*/
+  animation-timing-function: linear; /*애니메이션 가속도 설정 linear, ease, ease-in, ease-out, custom 등*/
+  animation-fill-mode: both;
+}
+
+@keyframes leg_move {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}

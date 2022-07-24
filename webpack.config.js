@@ -37,15 +37,11 @@ const myConfig = async () => {
     module: {
       rules: [
         {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader']
+          test: /\.s?css$/i,
+          use: ['style-loader', 'css-loader', 'sass-loader']
         },
         {
-          test: /\.(png|jpe?g|gif)$/i,
-          type: 'asset/resource'
-        },
-        {
-          test: /\.(woff|woff2|eot|ttf|otf)$/i,
+          test: /\.(png|jpe?g|gif|mp4|woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource'
         }
       ]

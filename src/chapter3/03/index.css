@@ -1,0 +1,101 @@
+/* 스크롤 배경 만들기 */
+.area_motion {
+  position: relative;
+  width: 100%;
+  height: 6000px;
+  background-image: url('/assets/images/bg-water.png');
+}
+.area_motion .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+.area_motion .bg.one.active {
+  opacity: 0;
+}
+.area_motion .bg.two.active {
+  opacity: 0.3;
+}
+.area_motion .bg.three.active {
+  opacity: 0.6;
+}
+.area_motion .bg.four.active {
+  opacity: 0.9
+}
+
+.area_motion .fish {
+  visibility: hidden;
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  z-index: 20;
+  width: 200px;
+  opacity: 0;
+  transform: translate(300px);
+  -webkit-transform: translate(300px);
+  -moz-transform: translate(300px);
+  -o-transform: translate(300px);
+  -ms-transform: translate(300px);
+  transition: 1s;
+}
+.area_motion .fish.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0px, -50px) rotate(40deg);
+  -webkit-transform: translate(0px, -50px) rotate(40deg);
+  -moz-transform: translate(0px, -50px) rotate(40deg);
+  -o-transform: translate(0px, -50px) rotate(40deg);
+  -ms-transform: translate(0px, -50px) rotate(40deg);
+}
+
+.area_motion .diver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(214px, 10px) rotate(70deg);
+}
+.area_motion .diver figure {
+  position: absolute;
+}
+
+.area_motion .diver figure img {
+  width: auto;
+}
+.area_motion .diver .figure_body {
+  display: inline-block;
+  z-index: 10;
+}
+.area_motion .diver .figure_leg {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+
+  transform-origin: 248px 148px;
+  -webkit-transform-origin: 248px 148px;
+  -moz-transform-origin: 248px 148px;
+  -o-transform-origin: 248px 148px;
+  -ms-transform-origin: 248px 148px;
+  animation-name: leg_move;
+  animation-duration: 0.8s; /*한번 재생걸리는시간*/
+  animation-delay: 0s; /*애니메이션 지연*/
+  animation-direction: alternate; /* 애니메이션 재생방향 alternate :순방향, reverse: 역방향*/
+  animation-iteration-count: infinite; /* 애니메이션 재생횟수 infinite 무한*/
+  animation-play-state: running; /* 애니메이션 재생여부  running :재생 (기본값), paused(애니메이션정지)*/
+  animation-timing-function: linear; /*애니메이션 가속도 설정 linear, ease, ease-in, ease-out, custom 등*/
+  animation-fill-mode: both;
+}
+
+@keyframes leg_move {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}

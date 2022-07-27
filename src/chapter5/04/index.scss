@@ -1,0 +1,96 @@
+@import '/assets/css/base.scss';
+/* 텍스트 오버랩 효과 */
+.section_mask {
+  overflow: hidden;
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 210px;
+  background: #000;
+  &.active {
+    .area_txt .area_motion .wrap_txt {
+      .left p span,
+      .right p span {
+        animation-play-state: running;
+      }
+    }
+  }
+  .area_txt {
+    .area_motion {
+      position: relative;
+      margin-top: 100px;
+      font-size: 150px;
+      line-height: 1;
+      color: #fff;
+      .wrap_txt {
+        overflow: hidden;
+        text-align: center;
+        .left {
+          overflow: hidden;
+          float: left;
+          width: 50%; // 색만 다른 동일한 텍스트를 좌우 반반 그려준다.
+          height: 100%;
+          p {
+            width: 200%; // 200%로 만들어 100%로 나오도록 한다.
+            color: #fff;
+            span {
+              display: inline-block;
+              padding-bottom: 5px;
+              text-align: center;
+              white-space: nowrap;
+              animation: move_text_mask 2.2s 1 both ease-in-out paused;
+            }
+          }
+        }
+        .right {
+          overflow: hidden;
+          float: left;
+          width: 50%;
+          height: 100%;
+          p {
+            width: 200%;
+            margin-left: -100%;
+            color: #00b8ff;
+            span {
+              display: inline-block;
+              padding-bottom: 5px;
+              text-align: center;
+              white-space: nowrap;
+              animation: move_text_mask 2.2s 1 both ease-in-out paused;
+            }
+          }
+        }
+        &.type02 {
+          span {
+            animation-delay: 0.3s !important; // 영역 마다 딜레이를 다르게 준다.
+          }
+          .left p {
+            color: #00b8ff;
+          }
+          .right p {
+            color: #fff;
+          }
+        }
+        &.type03 {
+          span {
+            animation-delay: 0.6s !important; // 영역 마다 딜레이를 다르게 준다.
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+
+@keyframes move_text_mask {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

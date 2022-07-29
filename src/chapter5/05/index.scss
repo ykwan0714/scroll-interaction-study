@@ -1,0 +1,66 @@
+@import '/assets/css/base.scss';
+/* 배경 오버랩 효과 */
+.section_overlap {
+  overflow: hidden;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  &.active {
+    .bg_change.color01,
+    .bg_change.color02,
+    .bg_change.color03 {
+      width: 0px;
+    }
+  }
+  .wrap_title {
+    position: relative;
+    z-index: 60;
+    padding-bottom: 50px;
+  }
+  .img_device {
+    position: relative;
+    z-index: 50;
+    width: 300px;
+    margin: 0 auto;
+  }
+  .bg_change {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    &.color01 {
+      z-index: 40;
+      background-color: #000;
+      transition: width 0.5s 0.2s;
+      -webkit-transition: width 0.5s 0.2s;
+      -moz-transition: width 0.5s 0.2s;
+      -o-transition: width 0.5s 0.2s;
+      -ms-transition: width 0.5s 0.2s;
+    }
+
+    &.color02 {
+      z-index: 30;
+      background-color: #272727;
+      transition: width 0.5s 0.7s;
+      -webkit-transition: width 0.5s 0.7s;
+      -moz-transition: width 0.5s 0.7s;
+      -o-transition: width 0.5s 0.7s;
+      -ms-transition: width 0.5s 0.7s;
+    }
+    &.color03 {
+      z-index: 20;
+      background-color: #c2bada;
+      transition: width 0.5s 1.2s;
+      -webkit-transition: width 0.5s 1.2s;
+      -moz-transition: width 0.5s 1.2s;
+      -o-transition: width 0.5s 1.2s;
+      -ms-transition: width 0.5s 1.2s;
+    }
+    &.color04 {
+      z-index: 10;
+      background-color: #000;
+    }
+  }
+}

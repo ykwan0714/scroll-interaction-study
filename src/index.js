@@ -53,12 +53,6 @@ import './index.css'
            <li>
               <a href="/chapter4/02">- 예제 2</a>
            </li>
-           <li>
-              <a href="/chapter4/03">- 예제 3</a>
-           </li>
-           <li>
-              <a href="/chapter4/04">- 예제 4</a>
-           </li>
         </ol>
      </li>
      <li>

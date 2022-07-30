@@ -79,9 +79,6 @@ import './index.css'
            <li>
               <a href="/chapter5/07">- 예제 7</a>
            </li>
-           <li>
-              <a href="/chapter5/08">- 예제 8</a>
-           </li>
         </ol>
      </li>
      <li>
@@ -92,12 +89,6 @@ import './index.css'
            </li>
            <li>
               <a href="/chapter6/02">- 예제 2</a>
-           </li>
-           <li>
-              <a href="/chapter6/03">- 예제 3</a>
-           </li>
-           <li>
-              <a href="/chapter6/04">- 예제 4</a>
            </li>
         </ol>
      </li>

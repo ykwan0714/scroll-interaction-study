@@ -1,11 +1,6 @@
 import '/assets/css/common.css'
 import './index.scss'
 import { $ } from '/assets/js/common.js'
-import img01 from '/assets/images/chapter5/1.jpg'
-import img02 from '/assets/images/chapter5/2.jpg'
-import img03 from '/assets/images/chapter5/3.jpg'
-import img04 from '/assets/images/chapter5/4.jpg'
-import img06 from '/assets/images/chapter5/6.jpg'
 ;(() => {
   const app = document.getElementById('App')
   app.innerHTML = `<div class="wrap">

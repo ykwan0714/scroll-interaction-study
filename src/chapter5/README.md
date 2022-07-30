@@ -25,6 +25,9 @@
 
 ## 예제 06
 스크롤이 요소의 위치에 도착했을때 실행될 스크립트 만들기
+- 각 엘리먼트만을 담당하는 함수를 만든다.
+- 각각의 함수를 window 엘리먼트에 이벤트 등록(window, resize)을 하여 별도로 계산하도록 한다.
 
 ## 예제 07
 URL HASH를 활용해 네비게이션 리모콘 만들기
+- [HTMLAreaElement.hash](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hash)

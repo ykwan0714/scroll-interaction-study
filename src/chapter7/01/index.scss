@@ -1,0 +1,105 @@
+@import '/assets/css/base.scss';
+.wrap {
+  overflow: visible;
+}
+.section_common {
+  position: relative;
+  height: 500px;
+  background-color: #080808;
+  h2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: #333;
+    font-size: 80px;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+.section_fixed {
+  background: #080808;
+  .wrap_fixed {
+    position: relative;
+    &::after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+    .title_fixed {
+      position: relative;
+      z-index: 50;
+      margin-bottom: 170px;
+      font-size: 200px;
+      color: #333;
+      text-align: center;
+    }
+    .content_txt {
+      float: left;
+      width: 50%;
+      padding-top: 300px;
+      p {
+        max-width: 80%;
+        font-size: 36px;
+        font-family: 'NotoM';
+        color: #333;
+        transition: color 0.5s;
+        &.active {
+          color: #fff;
+        }
+        &.txt02 {
+          margin-top: 300px;
+        }
+        &.txt03 {
+          margin-top: 300px;
+        }
+        &.txt04 {
+          margin-top: 300px;
+          margin-bottom: 500px;
+        }
+      }
+    }
+    .content_device {
+      position: sticky;
+      position: -webkit-sticky;
+      top: calc(50vh - 204px);
+      left: 0;
+      z-index: 40;
+      float: left;
+      width: 50%;
+      .wrap_img {
+        position: relative;
+        width: 240px;
+        height: 409px;
+        margin: 0 auto;
+        .img_device {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 20;
+        }
+        .wrap_slide {
+          overflow: hidden;
+          position: absolute;
+          left: 15px;
+          top: 89px;
+          z-index: 10;
+          width: 195px;
+          height: 237px;
+          .slide {
+            width: 780px;
+            height: 100%;
+            transition: transform 0.5s;
+            figure {
+              float: left;
+              width: 195px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+@import '/assets/css/base.scss';
+.wrap {
+  overflow: visible;
+}
+.section_common {
+  position: relative;
+  height: 500px;
+  background-color: #080808;
+  h2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: #333;
+    font-size: 80px;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+.section_fixed {
+  background: #080808;
+  .wrap_fixed {
+    position: relative;
+    &::after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+    .title_fixed {
+      position: relative;
+      z-index: 50;
+      margin-bottom: 170px;
+      font-size: 200px;
+      color: #333;
+      text-align: center;
+    }
+    .content_txt {
+      float: left;
+      width: 50%;
+      padding-top: 300px;
+      p {
+        max-width: 80%;
+        font-size: 36px;
+        font-family: 'NotoM';
+        color: #333;
+        transition: color 0.5s;
+        &.active {
+          color: #fff;
+        }
+        &.txt02 {
+          margin-top: 300px;
+        }
+        &.txt03 {
+          margin-top: 300px;
+        }
+        &.txt04 {
+          margin-top: 300px;
+          margin-bottom: 500px;
+        }
+      }
+    }
+    .content_device {
+      position: sticky;
+      position: -webkit-sticky;
+      top: calc(50vh - 204px);
+      left: 0;
+      z-index: 40;
+      float: left;
+      width: 50%;
+      @at-root .no-csspositionsticky & {
+        position: relative;
+        top: 600px;
+      }
+      .wrap_img {
+        position: relative;
+        width: 240px;
+        height: 409px;
+        margin: 0 auto;
+        .img_device {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 20;
+        }
+        .wrap_slide {
+          overflow: hidden;
+          position: absolute;
+          left: 15px;
+          top: 89px;
+          z-index: 10;
+          width: 195px;
+          height: 237px;
+          .slide {
+            width: 780px;
+            height: 100%;
+            transition: transform 0.5s;
+            figure {
+              float: left;
+              width: 195px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .section_common h2 {
+    font-size: 32px;
+  }
+  /* 모바일 버전에서 스크롤 거리를 설정함 */
+  .section_fixed {
+    .wrap_fixed {
+      height: 3000px;
+      .title_fixed {
+        font-size: 54px;
+        margin: auto;
+      }
+      .content_txt {
+        float: none;
+        position: sticky;
+        position: -webkit-sticky;
+        left: 0;
+        top: 0;
+        z-index: 50;
+        width: 100%;
+        padding-top: 100px;
+        p {
+          position: absolute;
+          left: 0;
+          top: 100px;
+          width: 100%;
+          max-width: 100%;
+          padding: 0 20px;
+          font-size: 18px;
+          text-align: center;
+          box-sizing: border-box;
+          opacity: 0;
+          transition: opacity 0.5s;
+          &.active {
+            opacity: 1;
+          }
+          &.txt02 {
+            margin-top: 0px;
+          }
+          &.txt03 {
+            margin-top: 0px;
+          }
+          &.txt04 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+      .content_device {
+        top: calc(100vh - 360px);
+        width: 100%;
+        .wrap_img {
+          width: 160px;
+          height: 272px;
+
+          .wrap_slide {
+            top: 66px;
+            width: 120px;
+            height: 146px;
+            .slide {
+              width: 480px;
+              figure {
+                width: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
